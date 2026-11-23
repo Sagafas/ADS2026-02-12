@@ -60,11 +60,6 @@ public class MyPriorityQueue<E> implements Queue<E> {
     }
 
     @Override
-    public boolean remove(Object o) {
-        return false;
-    }
-
-    @Override
     public boolean containsAll(Collection<?> c) {
         for(Object e : c) {
             if(!contains(e))
@@ -198,6 +193,11 @@ public class MyPriorityQueue<E> implements Queue<E> {
     }
 
     @Override
+    public boolean remove(Object o) {
+        return false;
+    }
+
+    @Override
     public Iterator<E> iterator() {
         return null;
     }
@@ -257,5 +257,4 @@ public class MyPriorityQueue<E> implements Queue<E> {
             break;
         }
     }
-
 }

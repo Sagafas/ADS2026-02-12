@@ -68,7 +68,7 @@ public class Test_Part2_Lesson12Test extends HomeWork {
                 lastKey()
                 """.split("\\s+");
         eObject = new TreeMap<>();
-        randomCheck("MyRbMap", methods);
+          randomCheck("MyRbMap", methods);
     }
 
     @Test(timeout = 500 * INVOCATION_COUNT_PER_METHOD)

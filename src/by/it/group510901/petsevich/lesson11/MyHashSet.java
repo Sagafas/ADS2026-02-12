@@ -177,8 +177,8 @@ public class MyHashSet<E> implements Set<E> {
 
         ListNode<E>[] newBuckets = (ListNode<E>[]) new ListNode[newCap];
         for(ListNode<E> bucket : buckets) {
+            int idx = bucket.hash % newCap;
             while(bucket != null) {
-                int idx = bucket.hash % newCap;
                 ListNode<E> next = bucket.next;
                 bucket.next = newBuckets[idx];
                 newBuckets[idx] = bucket;
@@ -198,7 +198,7 @@ class ListNode<E> {
     
     ListNode(E value, int hash) {
         this.value = value;
-        next = null;
+        this.next = null;
     }
 }
 
